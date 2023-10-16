@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <style>
+.body{
+            height: 100vh;
+            background-color: rgb(172, 202, 209);
+        }
+
+.parent{
+    background-color: lightblue;
+    height: 300px;
+    width: 400px;
+    margin:200px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 50px repeat(4,auto);
+    grid-template-areas: "head head head head" ;
+    gap: 10px;
+    
+
+
+}
+
+.div1{
+    grid-area: head;
+    background-color: whitesmoke;
+}
+
+.parent div{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+    </style>
+    <body>
+        <div class="body">
+<div class="parent">
+    <div class="div1"></div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div style="background-color: peachpuff;" >+</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div style="background-color: peachpuff;" >-</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div style="background-color: peachpuff;" >*</div>
+    <div style="background-color: peachpuff;">C</div>
+    <DIV>0</DIV>
+    <DIV>=</DIV>
+    <DIV style="background-color: peachpuff;">/</DIV>
+
+</div>
+</div>
+    </body>
+</html>

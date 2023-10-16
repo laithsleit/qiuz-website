@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Neon', sans-serif;
+    box-sizing: border-box;
+    transition: .3s;
+    scroll-behavior: smooth;
+}
+
+
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    color: #252525;
+}
+
+#header {
+    font-family: "Barrio", sans-serif;
+    font-size: 100px;
+}
+
+.quiz-container {
+    position: relative;
+    width: 70%;
+    margin: 10px;
+    min-height: 300px;
+}
+
+.question {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #252525;
+    text-align: center;
+}
+
+.choices {
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 60px;
+    color: #eee;
+}
+
+label {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.customRadio {
+    display: none;
+}
+
+.customRadio:hover {
+    background-color: rgb(116, 185, 238);
+    border: 2px solid #eee;
+}
+
+input:checked~.customRadio {
+    border: 2px solid #eee;
+    background: rgb(0, 119, 182);
+}
+
+/* Style checkmark */
+label .customRadio::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid #eee;
+    background-color: rgb(0, 119, 182);
+    -webkit-transition: all 1s linear;
+    transition: all 0.3s linear;
+}
+
+/* Show checkmark when checked */
+
+#progress-wrap {
+    position: relative;
+    border: 3px solid #eee;
+    width: 45%;
+    height: 10px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+#progress-bar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #443f00;
+    border-radius: 20px;
+    top: 0;
+    bottom: 0;
+    transition: 0.3s width linear;
+}
+
+button {
+    color: #fff;
+    font-size: 17px;
+    background-color: #968900;
+    border: 1px solid #968900e6;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 6px 0px #9689008b;
+    transition: all .1s;
+    margin: 20px;
+
+}
+
+button:active {
+    box-shadow: 0px 2px 0px #96890093;
+    position: relative;
+    top: 2px;
+}
+
+#show-answers,
+#return-home {
+    display: none;
+}
+
+#show-answers:hover,
+#return-home:hover {
+    transform-origin: bottom;
+    transform: scaleY(0.95) translateY(1.5px);
+}
+
+#show-answers:active,
+#return-home:active {
+    transform-origin: bottom;
+    transform: scaleY(0.89) translateY(1.3px);
+}
+
+#return-home {
+    display: block;
+}
+
+#results {
+    font-size: 25px;
+    color: #eee;
+}
+
+#nex-pre,
+#sho-ret {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+
+/* Initially position the buttons at the bottom */
+#button-container {
+    left: 40%;
+    right: 40%;
+    position: absolute;
+    display: flex;
+    background: #000000ad;
+
+}
+
+
+
+
+/* Styling for the buttons */
+#show-answers,
+#return-home {
+    font-family: "Bahiana", sans-serif;
+    font-size: 20px;
+    color: #EEE;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover and active states for the buttons */
+#show-answers:hover,
+#return-home:hover {
+    transform-origin: bottom;
+    transform: scaleY(0.95) translateY(1.5px);
+}
+
+#show-answers:active,
+#return-home:active {
+    transform-origin: bottom;
+    transform: scaleY(0.89) translateY(1.3px);
+}
+
+/* CSS positioning to make the slides sit as layers on top of one another 
+    Uses z-indexs and opacity to fade in and out */
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
+}
+
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1em;
+    /* Adjust the margin to match your layout */
+    color: #eee;
+    text-align: center;
+
+}
+
+#contans {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+body {
+    background-image: url(../img/back.jpg);
+    background-repeat: no-repeat;
+}
+
+.ff {
+    background: #000000ad;
+    height: 130vh;
+}
+
+/* continar */
+.container {
+    display: contents;
+    width: 100%;
+}
+
+.cont-box {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    position: relative;
+    width: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.668);
+}
+
+/* massage of fail or pass */
+.message {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.pass {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
+
+#results {
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+}
+
+
+/* media quries */
+
+/* @media screen and (max-width: 1100px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    #header {
+        font-size: 70px;
+    }
+
+    .question {
+        font-size: 35px;
+    }
+} */
+@media screen and (max-width: 1100px) {
+    #timer {
+        margin-top: 5em;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    #timer {
+        margin-top: 1em;
+    }
+
+    .box {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 808px) {
+    #timer {
+        margin-top: 4em;
+    }
+
+    .box {
+        width: 65%;
+    }
+}
+
+@media (max-width: 758px) {
+    label {
+        width: 60%;
+    }
+
+    #progress-wrap {
+        margin-top: 10px;
+        width: 60%;
+    }
+
+    .choices {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+        width: 160%;
+    }
+
+    #timer {
+        margin-top: 5em;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    .box {
+        width: 80%;
+        /* margin-top: 10em; */
+        height: 95vh;
+    }
+
+    body {
+        height: 150vh;
+    }
+
+    .ff {
+        height: 150vh;
+    }
+}
+
+@media (max-width: 666px) {
+    #timer {
+        margin-top: 10em;
+    }
+
+    .box {
+        width: 85%;
+    }
+}
+
+@media (max-width: 529px) {
+    #timer {
+        margin-top: 11em;
+    }
+
+    .box {
+        width: 85%;
+    }
+}
+
+@media (max-width: 405px) {
+    #timer {
+        margin-top: 12em;
+    }
+
+    .box {
+        width: 95%;
+    }
+}
+
+@media (max-width: 355px) {
+    #timer {
+        margin-top: 14em;
+    }
+
+    .box {
+        width: 95%;
+    }
+}
+
+label {
+    cursor: pointer;
+    color: white;
+    background: #252525;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px #252525;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+label.active {
+    background: white;
+    color: black;
+}

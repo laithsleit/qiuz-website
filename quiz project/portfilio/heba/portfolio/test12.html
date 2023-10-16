@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <style>
+    
+    .navBar {
+      width: 100%;
+      display: flex;
+      border: 1px solid;
+    }
+    .leftNavBar {
+      display: flex;
+      width: 80%;
+    }
+    .leftNavBar div {
+      margin: 20px;
+    }
+    .rightNavBar {
+      display: flex;
+    }
+    .rightNavBar div {
+      margin: 20px;
+    }
+    .seconNavbar {
+      width: 40%;
+      margin-left: 28%;
+      justify-content: center;
+      justify-content: space-between;
+      display: flex;
+      border: 1px solid;
+      margin-top: 20px;
+      padding: 20px;
+    }
+    .seconNavbar div {
+      color: black;
+      font-weight: bolder;
+    }
+    .thirdNavBar {
+      margin-left: 15%;
+      width: 80%;
+      height: 80px;
+      display: flex;
+    }
+    .alldep {
+      width: 20%;
+      background-color: rgb(72, 156, 72);
+      height: 80px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .fa-solid {
+      font-size: 15px;
+      color: white;
+    }
+
+    .allgat {
+      width: 20%;
+      background-color: rgb(23, 165, 39);
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      height: 30px;
+      border: 1px solid;
+      margin-top: 10px;
+      color: white;
+    }
+    .allgat1 {
+      width: 20%;
+      background-color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      height: 30px;
+      border: 1px solid;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    .allgat2 {
+      width: 20%;
+      background-color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      height: 30px;
+      border: 1px solid;
+      margin-top: 10px;
+    }
+    .allgat3 {
+      width: 7%;
+      background-color: rgb(23, 165, 39);
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      height: 20px;
+      border: 1px solid;
+      margin-top: 14px;
+    }
+    .leftBar {
+      height: 500px;
+      width: 17.5%;
+      background-color: white;
+      display: flex;
+      margin-left: 229px;
+      flex-direction: column;
+    }
+    .innerLeftBar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3px;
+      background-color: white;
+      color: black;
+    }
+
+    .try {
+      margin-left: 500px;
+      height: 280px;
+      margin-top: -495.9px;
+      width: 51.8%;
+      background-color: grey;
+    }
+    .img{
+        width: 100%;
+        height: 280px;
+        border: 1px solid;
+        background-image: url(vegata.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .underpage{
+        background-color: white;
+        margin: 0%;
+        height: 230px;
+        display: flex;
+        margin-left: 230px;
+        flex-wrap: wrap;
+        width: 69.9%;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 7px;
+
+    }
+    .img2{
+        width: 90%;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid;
+        margin-left: 8px;
+        margin-top: 5px;
+        
+
+
+    }
+    .text{
+        background-color: rgb(222, 222, 222);
+        width: 88.8%;
+        margin-left: 10px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        display: flex;
+        font-weight: bold;
+        font-style: italic;
+
+
+    }
+    .textimge{
+        font-size: 25px;
+        font-weight: 1000;
+        margin-left: 100px;
+        padding: 5px;
+        font-style: italic;
+    }
+    .textimge1{
+        font-size: 25px;
+        font-weight: 1000;
+        margin-left: 100px;
+        font-style: italic;
+
+    }
+    .textimage2{
+        color: green;
+        font-size: 10px;
+        font-weight: 1000;
+        margin-top: 100px;
+        margin-left: 100px;
+        font-style: italic;
+
+
+
+
+    }
+    .textimage3{
+        color: green;
+        font-size: 10px;
+        font-weight: 1000;
+        margin-left: 100px;
+        padding: 10px;
+        font-style: italic;
+
+
+    }
+    @media screen and (max-width: 1095px) {
+  .underpage {display: flex;flex-direction: column;display: block; 
+    width: 20%;}
+    
+    .thirdNavBar{flex-direction: column;display: block;
+    }
+    .innerLeftBar , .leftBar{flex-direction:column;display: flex;margin-left: 15%;margin-top: 15%;width: 20%;
+    }
+    
+  }
+
+    
+
+  </style>
+
+  <body>
+    <div class="fullPage">
+      <div class="navBar">
+        <div class="leftNavBar">
+          <div class="email"><i class="fa-solid fa-envelope" style="color: darkblue;"></i> Email</div>
+          <div class="freeshooping">Freeshobing</div>
+        </div>
+        <div class="rightNavBar">
+          <div><i class="fa-brands fa-facebook"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-linkedin"></i></div>
+          <div><i class="fa-solid fa-p"></i></div>
+          <div>English</div>
+          <div>Login</div>
+        </div>
+      </div>
+      <div class="seconNavbar">
+        <div style="color: green;">HOME</div>
+        <div>SHOP</div>
+        <div>PAGES</div>
+        <div>BLOG</div>
+        <div>CONTENT</div>
+      </div>
+      <div class="thirdNavBar">
+        <div class="allgat">All Departments</div>
+        <div class="allgat1">
+            All catagories
+        </div>
+        <div class="allgat2">what do you need</div>
+        <div class="allgat3">Search</div>
+      </div>
+
+      <div class="leftBar">
+        <div class="innerLeftBar"> Bakery</div>
+        <div class="innerLeftBar">Beverage</div>
+        <div class="innerLeftBar">Nonfood & Pharmacy</div>
+        <div class="innerLeftBar">Produce</div>
+        <div class="innerLeftBar">Floral</div>
+        <div class="innerLeftBar">Deli</div>
+        <div class="innerLeftBar">Prepared Foods</div>
+        <div class="innerLeftBar">Meat</div>
+        <div class="innerLeftBar">Seafood</div>
+        <div class="innerLeftBar">Banna</div>
+        <div class="innerLeftBar">WaterMelon</div>
+      </div>
+      <div class="try">
+        <div class="img">           
+            <div class="textimage2">FROUT FRESH</div>
+            <div class="textimge">Vigetalbels</div>
+            <div class="textimge1">100% Organic</div>
+            <div class="textimage3">FREE PUCKUP & DELIVRY </div>
+            
+        </div>
+          <div class="image">
+          </div>
+        </div>
+      </div>
+
+      <div class="underpage">
+        <div><img src="vegeta1.jpg" class="img2">
+            <div class="text">VEGETABELS</div>
+        </div>
+        <div><img src="vegeta2.jpg" class="img2">
+            <div class="text">DRINK FROUT</div>
+
+        </div>
+        <div><img src="vegeta3.jpg" class="img2">
+            <div class="text">FRESH FROUTS</div>
+
+        </div>
+        <div><img src="vegat4.jpg" class="img2">
+            <div class="text">DRNK AND STUFF</div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

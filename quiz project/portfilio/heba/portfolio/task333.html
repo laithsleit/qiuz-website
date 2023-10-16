@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+         .container{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 1fr 2fr 4fr;
+            gap: 10px;
+            background-color: antiquewhite;
+         }
+         .container div{
+            background-color: rgb(90, 143, 143);
+
+         }
+         .header-bar{
+            display: flex;
+            grid-area: 1/1/2/3;
+            justify-content: space-between;
+         }
+         .side-bar{
+            grid-area: 2/2/4/3;
+         }
+         .header-bar div{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 10px;
+           
+         }
+         .cards{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+         }
+         .cards div{
+            border: solid black;
+            
+         }
+         .cards div h3{
+            border: solid  black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+         }
+         @media (min-width: 320px) and (max-width: 661px) {
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <h2>My Website</h2>
+            <div><span>Link1</span><span>Link2</span><span>Link3</span></div>
+        </div>
+        <div class="paragraph">
+            <h2>This is main heading</h2>
+            <p>Veggies es bounus vobios,prandin vos posstulio essum  magis khoribi anion MAM E=TALSOD LAMmia melon azujai bean garlic.</p>
+            <p>Gumbo beet greens corn soko wjeff gojnan fjoojf oanfwwfn janoanf noanmvcsf jnnc jfj kjj jaojojafo ojnaofjeaoe ojaeojeaoj ojaeoa ojao oneajojefoe ojoaoa ojaoaojf oajooajf onawofjoa joajfonofjf ojaofjoajf oofjpfjpjf ojjap ojfjf pjapjfp pjapaj .</p>
+        </div>
+        <div class="side-bar">
+            <p>have you discovers all of the other exactly content on this webside?</p>
+        </div>
+        <div class="cards">
+            <div>
+                <h3>Card One</h3>
+                <p>dfkkk kfkfkk kkkkkk kkkkkk kkkkkk kkkkkkk fppoeii ioerjiseppgfp ois isjjps ipjsjpsp pkspskpf psfkpoksp pokfsp psfkkf pskpsk.</p>
+            </div>
+            <div>
+                <h3>Card Tow</h3>
+                <p>dfkkk kfkfkk kkkkkk kkkkkk kkkkkk kkkkkkk fppoeii ioerjiseppgfp ois isjjps ipjsjpsp pkspskpf psfkpoksp pokfsp psfkkf pskpsk.</p>
+            </div>
+            <div>
+                <h3>Card Three</h3>
+                <p>dfkkk kfkfkk kkkkkk kkkkkk kkkkkk kkkkkkk fppoeii ioerjiseppgfp ois isjjps ipjsjpsp pkspskpf psfkpoksp pokfsp psfkkf pskpsk.</p>
+            </div>
+            <div>
+                <h3>Card Four</h3>
+                <p>dfkkk kfkfkk kkkkkk kkkkkk kkkkkk kkkkkkk fppoeii ioerjiseppgfp ois isjjps ipjsjpsp pkspskpf psfkpoksp pokfsp psfkkf pskpsk.</p>
+            </div>
+            <div>
+                <h3>Card Five</h3>
+                <p>dfkkk kfkfkk kkkkkk kkkkkk kkkkkk kkkkkkk fppoeii ioerjiseppgfp ois isjjps ipjsjpsp pkspskpf psfkpoksp pokfsp psfkkf pskpsk.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

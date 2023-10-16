@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+            transition: 0.4s;
+            font-family: 'Tilt Neon', sans-serif;
+
+        }
+
+        h1 {
+            color: white;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: white;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        h3 {
+            color: white;
+        }
+
+        p {
+            color: white;
+            margin: 20px;
+        }
+        header {
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(img/back.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            justify-content: center;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card-container {
+            width: 500px;
+            padding: 40px;
+            margin: 50px;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #b8b3b3c9;
+            text-align: justify;
+
+        }
+
+        body {
+            width: 100vw;
+            background-color: #EEEEEE;
+        }
+
+        .container input {
+            padding: 10px;
+            width: 300px;
+            margin: 10px;
+            border: none;
+            /* border-radius: 40px; */
+        }
+
+        button {
+            padding: 0.8em 1.8em;
+            border: 2px solid;
+            position: relative;
+            overflow: hidden;
+            background-color: transparent;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: .3s;
+            z-index: 1;
+            font-family: inherit;
+            color: #968900;
+            margin-top: 50px;
+        }
+
+        button::before {
+            content: '';
+            width: 0;
+            height: 300%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            background: #968900;
+            transition: .5s ease;
+            display: block;
+            z-index: -1;
+        }
+
+        button:hover::before {
+            width: 105%;
+            color: #fff;
+        }
+
+        button:hover {
+            color: #ffffff;
+        }
+
+        a {
+            color: white;
+            font-size: 20px;
+            text-decoration: underline;
+            padding-top: 10px;
+        }
+
+        .form i {
+            position: absolute;
+            /* right: 2px; */
+            bottom: 42%;
+            color: rgb(207, 203, 203);
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        span {
+            color: black;
+            font-size: xx-large;
+        }
+
+        .v {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            margin-top: 10%;
+        }
+
+        #player {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #player iframe {
+
+            height: 250px;
+            width: 350px;
+
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+        .nav_links {
+             flex: 1;
+            text-align: right;
+        }
+
+        .nav_links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav_links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+}
+
+        .nav_links ul li::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #968900;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+
+        }
+
+        .nav_links ul li:hover::after {
+        width: 100%;
+        }
+
+        @media (max-width: 1050px) {
+                    .container {
+                        flex-direction: column;
+                    }
+
+                    .card-container {
+                        width: 90%;
+                        margin: 10px;
+                    }
+
+                    button {
+                        margin-top: 0px;
+                    }
+
+                    .v {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 10%;
+                    }
+
+                    #player {
+                    width: 110%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    }
+                    #player iframe {
+                        height: 250px;
+                        width: 450px;
+                    }
+                
+                }
+
+    </style>
+</head>
+
+<body>
+    <header>
+            <nav>
+                <img src="img/preview (2).png">
+
+                <div class="nav_links" id="navlinks">
+
+                    <ul>
+                        <i class="fa-solid fa-xmark" id="close-menu"></i>
+                        <li><a href="index.html">HOME</a></li>
+                        </ul>
+                    </div>
+                    
+                
+            </nav>
+    
+        
+        <div class="flex-container">
+            <div class="container">
+                <div class="card-container">
+                    <!-- <img src="HTML5_1Color_Black.png"  style="width: 200px;height: 150px;"> -->
+                    <h2>Welcome to the <span> HTML </span> Quiz</h2>
+                    <p>Test your knowledge of CSS and basic web development! The quiz contains questions and there is 5 min
+                        time limit. At the end of the quiz, you’ll receive the result.<br><br> <b> Good luck!</b>
+                    </p>
+                    <!-- Submit Button -->
+                    <button type="submit" onclick="openQuiz()" id="start"> Start </button>
+
+                </div>
+                <div class="card-container">
+                    <h3>Prepare for the quiz with these educational videos:</h3>
+
+
+                    <div class="v">
+                        <div id="player"> </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <script>
+
+        const root = document.getElementById("player");
+
+        // Create an iframe element to display the video.
+        const iframe = document.createElement("iframe");
+
+
+        // Add the iframe to the root.
+        root.appendChild(iframe);
+
+        var apikey = 'AIzaSyBKeNa--8qW05Ya3Mu2wxZljbcYAkc5a4g'
+        var playlist = 'PLDUhTS_pnVbbKg6bI-IDcwmqqy_OrlMSU'
+        // Fetch the playlist items for the given playlist ID.
+        fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=7&playlistId=${playlist}&key=${apikey}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Get the list of playlist items.
+                const playlistItems = data.items;
+
+                // Set the default video to be the first playlist item.
+                iframe.src = `https://www.youtube.com/embed/${playlistItems[0].snippet.resourceId.videoId}`;
+
+            });
+
+            function openQuiz() {
+  window.open('quizHtml.html', '_blank'); // '_blank' opens the URL in a new tab
+}
+    </script>
+</body>
+
+</html>

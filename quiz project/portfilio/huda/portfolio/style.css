@@ -1,0 +1,488 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{  
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Bradley Hand, cursive;
+    
+}
+
+#header{
+    width:100%;
+    
+    padding-left:10px;
+    
+}
+body{
+    background-color: #eee;
+}
+
+.logo{
+    width:130px;
+    padding:5px;
+}
+
+nav  {
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 30px;
+    align-content: center;
+
+}
+
+ul li{
+ list-style: none;
+ display: inline-block;
+ padding:30px;
+ font-size: large;
+  
+}
+
+nav ul li a{
+    color:#26b1cf;
+    text-decoration: none;
+}
+
+a:hover{
+  color:gray;
+
+}
+ 
+.first{
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.first>div{
+ width: 50%;
+
+}
+.first>img{
+    width:40%;
+    height: auto;
+
+}
+.first.image>img {
+     margin: auto;
+    width: 200px;
+}
+
+.first>.paragraph{
+    margin-top: 100px;
+    text-align: center;
+    color:gray;
+    font-size: large;
+}
+
+
+/*About*/
+/*second box {id about}*/
+#about{
+  margin-top: 100px;
+ 
+   color:gray;
+    
+}
+
+.second{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+ 
+.image2>img{
+    min-width: 200px;
+    max-width: 400px;
+   
+    border-radius: 15px;
+}
+
+.paragraph2{
+    flex-basis: 50%;
+}
+
+.paragraph2>p{
+    margin:50px;
+    font-size: large;
+}
+
+.paragraph2>h1{
+    margin-left:20px ;
+  color:#26b1cf;     
+
+}
+
+/* my serveces*/
+#services{
+    margin: 30px;
+}
+.Third {
+ display: flex;
+ flex-wrap: wrap;
+ margin-left: 150px;
+}
+
+.Third>div{
+    width:200px;
+    margin: 20px;
+}
+
+/*skills id */
+#skills{
+    margin-top: 50px;
+    text-align: center;
+    color:#26b1cf;
+}
+
+#skills>.container>p{
+    margin-top: 40px;
+    font-size: 20px;
+    color:gray
+}
+
+
+body {
+    font-family: "Lato";
+    font-size: 16px;
+  }
+  
+  /*** <--- CIRCLE STYLES ---> ***/
+  .wrap-circles {
+    display: flex;
+    width: fit-content;
+    height: 300px;
+    margin: auto;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    
+  }
+  
+  .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background:  gray;
+    overflow: hidden;
+  }
+  .circle.per-5 {
+    background-image: conic-gradient(#26b1cf 5%, gray 0);
+  }
+  .circle.per-35 {
+    background-image: conic-gradient(#26b1cf 35%, gray 0);
+  }
+  .circle.per-80 {
+    background-image: conic-gradient(#26b1cf 80%, gray 0);
+  }
+  
+  .circle .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background: #eee;
+    border-radius: 50%;
+    font-size: 1.85em;
+    font-weight: 300;
+    color: gray;
+  }
+
+  /* experiance grid */ 
+  #Experience{
+    margin-top:50px;
+  }
+  .grid-container {
+    color:gray;
+    display: grid;
+    grid-template-columns: auto auto;
+   
+   
+  }
+  .grid-item {
+     
+    
+    padding: 20px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  .grid-item>h3{
+    border-width:0 0 5px 0;
+    border-color:#26b1cf;
+    border-style: solid;
+    text-align: left;
+    width: 100px;
+  }
+
+  .grid-item>img{
+     width:50%;
+     
+  }
+
+  .grid-item>p{
+    width:50%;
+    text-align: left;
+  }
+
+  .grid-item>p>a{
+   text-align: left;
+    color: #26b1cf;
+
+  }
+  .grid-item>p>a:hover{
+    background-color:gray;
+  }
+/*contact with me*/
+  #contact{
+    
+    background-color: rgb(204, 203, 203);
+    width:100%;
+    height: 300px;
+    color:gray;
+  }
+
+#contact .contact p {
+    margin-top: 20px;
+}
+nav .fa-solid   { 
+    display: none;}
+
+/*-----------------------responsive----------------------------*/
+   
+@media only screen and (max-width:800px){
+    /*burger menu bar*/
+    nav .fa-solid  { 
+        display: block;
+         font-size: 25px;}
+    
+    nav  .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+
+    
+    nav ul{
+        background-color: gray;
+        position: fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin:25px;
+    }
+
+    nav ul .fa-solid {
+        position:absolute;
+        top:25px;
+        left:25px;
+        cursor:pointer;
+    }
+ /*end of the  burger menu*/
+
+
+ #Experience{
+   
+  }
+  .grid-container {
+    color:gray;
+    display: grid;
+    grid-template-columns: auto ;
+   
+   
+  }
+  .grid-item {
+    text-align: center;
+  }
+
+
+  .first{
+    display: inline ;
+    text-align: center;
+     
+
+}
+
+.first>div{
+    margin-top: 0;
+    margin-left: 200px;
+
+}
+ 
+.first>img {
+    padding: 10px;
+     margin-left: 200px;
+     width: 400px;
+     
+}
+
+
+  
+  .second{
+      display: inline; 
+  }
+  
+   
+  .image2>img{
+    margin-left: 200px;
+  }
+  
+ 
+  
+  .paragraph2>p{margin-left: 200px;
+      margin:50px;
+      font-size: large;
+  }
+  
+  .paragraph2>h1{
+      margin-left:20px ;
+    color:#26b1cf;     
+  
+  }
+ 
+}
+
+
+
+ /*-----------------------second nedia---------------------------*/
+@media only screen and (max-width:528px){
+    .first>.paragraph{
+        margin-left: 100px;
+        font-size: medium;
+    
+    }
+    
+    .first>div{
+        margin-top: 0;
+        margin-left: 100px;
+       
+    
+    }
+     
+    .image2>img{
+        margin-right: 100px; 
+       
+        border-radius: 15px;
+    }
+
+    #contact{
+    
+         margin: 0;
+        width:500px;
+        
+      }
+      #skills{
+        margin-left: 100px;
+        
+    }
+    .grid-item>p{
+        width:90%;
+        
+      }
+   
+      /*third media*/
+      @media only screen and (max-width:462px){
+      /* experiance grid */ 
+          .wrap-circles{
+            width: 100px;
+            display: inline;
+          }
+                }
+
+      @media only screen and (max-width:462px){
+         .wrap-circles{
+            margin-left: 400px;
+           
+      }
+      #skills>.container>p{
+         width:500px;    
+}
+        
+        .grid-container {
+         
+            display: grid;
+            grid-template-columns: auto  ;
+        
+        
+        }
+        .grid-item {
+            
+            
+             width:800px;
+            font-size:30px;
+           
+        }
+         
+        #contact{
+    
+         
+            width: 700px;;
+            height: 300px;
+           
+          }
+        .logo{
+            width:200px;
+        }
+          .first>img{
+            width:600px;
+            
+        
+        }
+        .first>.paragraph{
+             
+           width: 600px;
+            font-size: 30px;
+        }
+        
+        #about{
+            
+           width:600px;
+            
+              
+          }
+           
+          
+           
+          .image2>img{
+               width: 800px;
+          }
+          
+          
+          
+          .paragraph2>p{
+              margin:50px;
+              font-size: 30px;
+          }
+          
+          #services{
+            font-size: 30px;
+            width:800px;
+        }  
+         
+        #skills>.container>p{
+            font-size: 30px;
+            
+           
+            
+        }
+        }}
